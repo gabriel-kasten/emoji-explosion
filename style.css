@@ -1,48 +1,50 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #222;
+    background: #222;
     overflow: hidden;
 }
 
 .container {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.fiesta {
-    z-index: -1;
-    position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.btn-confettis {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 7px 0 rgb(160,160,160);
     font-size: 30px;
 }
-
+.btn-confettis:active {
+    margin-top: 7px;
+    box-shadow: 0 0px 0 rgb(160,160,160);
+}
 .slot {
     position: relative;
     perspective: 1000px;
 }
-
 .slot div {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     user-select: none;
-}
-
-button {
-    background-color: #23C3D7;
-    color: white;
-    cursor: pointer;
-    outline: none;
-    border-radius: 10px;
-    border: none;
-    padding: 10px 16px 10px 16px;
-    font-size: 16px;
-    text-transform: uppercase;
 }
